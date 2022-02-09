@@ -1,6 +1,10 @@
 package br.com.bytebank.banco.modelo;
 
-
+/**
+ *   Classe que representa a conta
+ * @author Thiago Vasconcelos
+ *
+ */
 
 public abstract class Conta {
 

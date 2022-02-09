@@ -1,5 +1,10 @@
 package br.com.bytebank.banco.modelo;
 
+/**
+ *  Classe que representa a conta poupança
+ * @author  Thiago Vasconcelos
+ *
+ */
 
 public class ContaPoupanca extends Conta {
 

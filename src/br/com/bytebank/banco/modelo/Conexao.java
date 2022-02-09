@@ -1,4 +1,10 @@
 package br.com.bytebank.banco.modelo;
+/**
+ * Classe que simula uma conexão 
+ * @author  Thiago Vasconcelos
+ *
+ */
+
 public class Conexao {
 
     public Conexao() {

@@ -1,5 +1,11 @@
 package br.com.bytebank.banco.modelo;
 
+/**
+ *  Classe responsável pelo calculo do imposto.
+ * @author Thiago Vasconcelos
+ *
+ */
+
 public class CalculadorDeImposto {
 	
 	private double totalImposto;
