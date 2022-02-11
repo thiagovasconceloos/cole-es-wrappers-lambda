@@ -6,7 +6,7 @@ import java.util.Objects;
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 
-public class Testes {
+public class TesteArrayList {
 
 	public static void main(String[] args) {
 		//neste array so tem objetos do tipo conta
