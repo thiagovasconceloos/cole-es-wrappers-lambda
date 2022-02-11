@@ -1,31 +1,28 @@
 package br.com.bytebank.banco.testes;
 
+import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
+// importou 
+import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 public class TestArrayReferencias {
 
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-           
-		
-	  ContaCorrente[] conta = new ContaCorrente[5];
-	  ContaCorrente cc1 = new ContaCorrente(120,021);
-	  
-	  conta[0]= cc1;
-	  
-	  ContaCorrente cc2 = new ContaCorrente(220,022);
-	  conta[1]= cc2;
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+        // alterando o tipo
+        Conta[] contas = new Conta[5];
+        ContaCorrente cc1 = new ContaCorrente(22, 11);
+        contas[0] = cc1;
+
+        // cria instância de ContaPoupanca
+        ContaPoupanca cc2 = new ContaPoupanca(22, 22);
+        contas[1] = cc2;    
+
+        System.out.println(contas[1].getNumero()  );
+
+        // alterou o tipo, realizando o cast
+        ContaCorrente ref = (ContaCorrente) contas[0];
+        System.out.println(cc2.getNumero());
+        System.out.println(ref.getNumero());
+    }
 }
