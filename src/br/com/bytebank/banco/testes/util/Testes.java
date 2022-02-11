@@ -9,7 +9,8 @@ import br.com.bytebank.banco.modelo.ContaCorrente;
 public class Testes {
 
 	public static void main(String[] args) {
-		ArrayList lista = new ArrayList();
+		//neste array so tem objetos do tipo conta
+		ArrayList<Conta> lista = new ArrayList<Conta>();
 		
 	    //Arraylist é uma array de referencias
 		
@@ -24,10 +25,10 @@ public class Testes {
 	        //metodo size permite ver quantas posicões estao ocupadas no array
 	        System.out.println(lista.size());
            
-	        // pegamos o primeiro item do array e setamos uma referencia, alem disso fizemos um cast 
-	        //pois o objeto é generico, então pra gerar uma referencia é preciso converter para algo mais especifico.
+	        // pegamos o primeiro item do array e setamos uma referencia
+	       
 	        
-	        Conta ref = (Conta) lista.get(0);
+	        Conta ref =  lista.get(0);
 	        
 	        
 	        //criamos mais uma conta e adicionamos ao array
@@ -51,7 +52,7 @@ public class Testes {
 	        	
 	        }
 	        
-	        for(Object oRef : lista) {
+	        for(Conta oRef : lista) {
 	        	
 	        	
 	        	System.out.println(oRef);
