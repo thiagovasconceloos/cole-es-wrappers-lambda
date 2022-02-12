@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
 
 import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.Conta;
@@ -12,7 +11,7 @@ import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 
 
-public class Testes {
+public class TestesAnonimas {
 
 		        public static void main(String[] args) {
 
@@ -46,28 +45,32 @@ public class Testes {
 		                lista.add(cc3);
 		                lista.add(cc4);
 		                
-		                lista.forEach((t)->  System.out.println(t + " " + t.getTitular().getNome()) );
+		                for (Conta conta : lista) {
+						   System.out.println(conta);	
+						}
 		               
-                        System.out.println("=======================================");
-		                lista.sort((c1,c2) ->  Integer.compare(c1.getNumero(), c2.getNumero()));
+                      
+		              // comparaContas1 comparador = new comparaContas1();
+		                
+		                
+		                
+		                lista.sort(new Comparator<Conta>() {
 
-	                Comparator<Conta> comp = (Conta c1, Conta c2) -> {
-	                            String nomeC1 = c1.getTitular().getNome();
-	                            String nomeC2 = c2.getTitular().getNome();
-	                            return nomeC1.compareTo(nomeC2);
-	                };
-	                
-	                
-	                lista.forEach((t) -> System.out.println(t + " " + t.getTitular().getNome()));
-	                
-	                
-	                
-	                
-	                
+		                    @Override
+		                    public int compare(Conta c1, Conta c2) {
 
-//	        for (Conta conta : lista) {
-//	                System.out.println(conta + " " + conta.getTitular().getNome());
-//	        }
+		                        return Integer.compare(c1.getNumero(), c2.getNumero());
+		                                }
+		                            }
+		                            );
+		              
+		                
+		                System.out.println("====================");
+		                
+		                for (Conta conta : lista) {
+							   System.out.println(conta + "  " + conta.getTitular().getNome());	
+							}
+		        
 
 		
 
