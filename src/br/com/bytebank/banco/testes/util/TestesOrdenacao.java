@@ -11,7 +11,14 @@ import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 
 
-public class Testes {
+public class TestesOrdenacao {
+
+	
+		
+
+
+
+
 
 		        public static void main(String[] args) {
 
@@ -50,30 +57,60 @@ public class Testes {
 						}
 		               
                       
-		              // comparaContas1 comparador = new comparaContas1();
+		                // comparaContas comparador = new comparaContas();
 		                
 		                
 		                
-		                lista.sort(new Comparator<Conta>() {
-
-		                    @Override
-		                    public int compare(Conta c1, Conta c2) {
-
-		                        return Integer.compare(c1.getNumero(), c2.getNumero());
-		                                }
-		                            }
-		                            );
-		              
+		                lista.sort(null);
+		                
+		               // Collections.sort(lista,new TitularDaContaComparador());
+		                Collections.sort(lista);
+		                Collections.reverse(lista);
 		                
 		                System.out.println("====================");
 		                
 		                for (Conta conta : lista) {
 							   System.out.println(conta + "  " + conta.getTitular().getNome());	
 							}
-		        
+		        }
 
 		
 
-	} }
+	}
+
+class TitularDaContaComparador implements Comparator<Conta>{
+
+	@Override
+	public int compare(Conta c1, Conta c2) {
+		String nomeC1= c1.getTitular().getNome();
+		String nomeC2= c2.getTitular().getNome();
+		
+		 return nomeC1.compareTo(nomeC2);
+		
+		
+	}
+	
+	
+	
+}
 
 
+
+
+class  comparaContas implements Comparator<Conta> {
+ //Comparar contas, ordenar pelo numero da Conta
+	@Override
+	public int compare(Conta c1, Conta c2) {
+		
+		 return Integer.compare(c1.getNumero(), c2.getNumero());
+		
+		
+//		return  c1.getNumero() - c2.getNumero();
+	      
+		
+	}
+	
+	
+	
+	
+}
