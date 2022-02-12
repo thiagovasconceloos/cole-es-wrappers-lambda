@@ -2,7 +2,7 @@ package br.com.bytebank.banco.testes.util;
 
 import java.util.*;
 
-public class Teste {
+public class TesteWrapperInteger {
 	
 	public static void main(String[] args) { 
 		
